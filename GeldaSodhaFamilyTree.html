@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        ul,
+        #myUL {
+            list-style-type: none;
+        }
+
+        #myUL {
+            margin: 0;
+            padding: 0;
+        }
+
+        .caret {
+            cursor: pointer;
+            -webkit-user-select: none;
+            /* Safari 3.1+ */
+            -moz-user-select: none;
+            /* Firefox 2+ */
+            -ms-user-select: none;
+            /* IE 10+ */
+            user-select: none;
+        }
+
+        .caret::before {
+            content: "\25B6";
+            color: black;
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        .caret-down::before {
+            -ms-transform: rotate(90deg);
+            /* IE 9 */
+            -webkit-transform: rotate(90deg);
+            /* Safari */
+            '
+ transform: rotate(90deg);
+        }
+
+        .nested {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <p>વંશ : અગ્નિ<br> ક્ષેત્ર : આબુ પર્વત<br> વેદ : યજુર્વેદ<br> ગુરુ : ધોરમરખ<br> પિતા : ગૌતમ<br> માતા : અહિલ્યા<br> સાખા : માધવી<br> દેવી : સંચાય<br> પર્વ : પાંચસ્વાહ<br> નદી : સફરા<br> નિશાન : સુવાપંખી જાજમ - હરી પંખ ઢાલ<br> ઘોડો : ખડો બંધારો સ્તાપન્થ<br> ઝંડો : ત્રીબંધી <br> ગોત્ર : અગ્નિ <br>
+    </p>
+    <h1>ગેલડા સોઢા વંશ વૃક્ષ</h1>
+    <p>મેઘરખજી
+        <p>ગેહળજી
+            <font color="blue"> (ગેલડા)</font>
+            <p>ખિમકરણજી
+                <p>દેવાજી
+                    <p>કેહરસિંહજી
+                        <p>માલોજી
+                            <p>સાદુરજી
+                                <ul id="myUL">
+                                    <li><span class="caret">લુભાજી</span>
+                                        <ul class="nested">
+                                            <li><span class="caret">1.વિસોજી</span>
+                                                <ul class="nested">
+                                                    <li>a.મેહરજી </li>
+                                                    <li><span class="caret">b.કાથડજી
+                                                        <ul class="nested">
+                                                            <li><span class="caret">વીરાજી
+                                                            	<ul class="nested">
+                                                            		<li>ગજણજી</li>
+                                                            	</ul>	
+                                                            </li>
+                                                            <li>કેહરસિંહ</li>
+                                                        </ul>
+                                                    </li>
+                                            	    <li>c.ભીભોજી <font color="blue">(ગામ બોઆ માં વંશ છે)</font></li>                                       
+                                                </ul>
+                                            <li><span class="caret">2.હાલોજી</span>
+                                                <ul class="nested">
+                                                    <li>Black Tea</li>
+                                                    <li>White Tea</li>
+                                                </ul>
+                                            </li>
+                                    </li>
+                                
+
+                                <script>
+                                    var toggler = document.getElementsByClassName("caret");
+                                    var i;
+
+                                    for (i = 0; i < toggler.length; i++) {
+                                        toggler[i].addEventListener("click", function() {
+                                            this.parentElement.querySelector(".nested").classList.toggle("active");
+                                            this.classList.toggle("caret-down");
+                                        });
+                                    }
+                                </script>
+
+</body>
+
+</html>
